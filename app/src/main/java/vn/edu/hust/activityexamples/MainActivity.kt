@@ -121,7 +121,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
-        val selectedItem = items.get((item.menuInfo as AdapterContextMenuInfo).position)
+        val selectedItem = items[(item.menuInfo as AdapterContextMenuInfo).position]
         if (item.itemId == R.id.action_download) {
             Log.v("TAG", "Download $selectedItem")
         } else if (item.itemId == R.id.action_share) {
