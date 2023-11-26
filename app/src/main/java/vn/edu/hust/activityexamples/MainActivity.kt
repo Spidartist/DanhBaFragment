@@ -84,12 +84,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         val imageView = findViewById<ImageView>(R.id.imageView)
-//        registerForContextMenu(imageView)
 
         imageView.setOnClickListener {
-//            if (actionMode == null)
-//                actionMode = startSupportActionMode(actionModeCallback)
-
             val popupMenu = PopupMenu(this, it)
             popupMenu.inflate(R.menu.main_menu)
             popupMenu.setOnMenuItemClickListener {
