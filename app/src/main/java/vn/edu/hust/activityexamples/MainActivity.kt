@@ -36,13 +36,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun onActionItemClicked(mode: ActionMode?, item: MenuItem?): Boolean {
-            if (item?.itemId == R.id.action_download) {
-                Log.v("TAG", "Download")
-            } else if (item?.itemId == R.id.action_share) {
-                Log.v("TAG", "Share")
-            } else if (item?.itemId == R.id.action_settings) {
-                Log.v("TAG", "Settings")
-            }
             return true
         }
 
@@ -89,13 +82,6 @@ class MainActivity : AppCompatActivity() {
             val popupMenu = PopupMenu(this, it)
             popupMenu.inflate(R.menu.main_menu)
             popupMenu.setOnMenuItemClickListener {
-                if (it.itemId == R.id.action_download) {
-                    Log.v("TAG", "Download")
-                } else if (it.itemId == R.id.action_share) {
-                    Log.v("TAG", "Share")
-                } else if (it.itemId == R.id.action_settings) {
-                    Log.v("TAG", "Settings")
-                }
                 true
             }
             popupMenu.show()
@@ -118,13 +104,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
         val selectedItem = items[(item.menuInfo as AdapterContextMenuInfo).position]
-        if (item.itemId == R.id.action_download) {
-            Log.v("TAG", "Download $selectedItem")
-        } else if (item.itemId == R.id.action_share) {
-            Log.v("TAG", "Share $selectedItem")
-        } else if (item.itemId == R.id.action_settings) {
-            Log.v("TAG", "Settings $selectedItem")
-        }
         return super.onContextItemSelected(item)
     }
 
@@ -134,13 +113,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.action_download) {
-            Log.v("TAG", "Download")
-        } else if (item.itemId == R.id.action_share) {
-            Log.v("TAG", "Share")
-        } else if (item.itemId == R.id.action_settings) {
-            Log.v("TAG", "Settings")
-        }
 
         return super.onOptionsItemSelected(item)
     }

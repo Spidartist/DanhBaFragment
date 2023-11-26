@@ -2,18 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_share"
-        android:title="Share"
+        android:id="@+id/action_add"
+        android:title="Add person"
         android:icon="@drawable/baseline_share_24"
-        app:showAsAction="never"/>
-    <item
-        android:id="@+id/action_download"
-        android:title="Download"
-        android:icon="@drawable/baseline_cloud_download_24"
-        app:showAsAction="never"/>
-    <item
-        android:id="@+id/action_settings"
-        android:title="Settings"
-        android:icon="@drawable/baseline_settings_24"
         app:showAsAction="never"/>
 </menu>

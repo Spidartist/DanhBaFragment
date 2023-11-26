@@ -13,11 +13,23 @@
         <action
             android:id="@+id/action_listFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/addFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="vn.edu.hust.activityexamples.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" >
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="vn.edu.hust.activityexamples.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add">
+        <action
+            android:id="@+id/action_addFragment_to_listFragment"
+            app:destination="@id/listFragment" />
     </fragment>
 </navigation>

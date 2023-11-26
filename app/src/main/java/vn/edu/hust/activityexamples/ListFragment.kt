@@ -8,10 +8,9 @@ import android.widget.AdapterView
 import android.widget.ListView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import vn.edu.hust.activityexamples.DanhBa.Companion.items
 
 class ListFragment : Fragment() {
-
-    val items = arrayListOf<Person>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,15 +19,7 @@ class ListFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_list, container, false)
         val recyclerView = view.findViewById<ListView>(R.id.recycler_view)
 
-        repeat(28) {
-            val index = it + 1
-            items.add(Person(
-                index,
-                "Hoang Danh Quan $index",
-                resources.getIdentifier("ic_launcher_background", "drawable", activity?.packageName),
-                "09888426$index"
-            ))
-        }
+
 
         val adapter = DanhBaItemAdapter(items)
 
@@ -44,4 +35,6 @@ class ListFragment : Fragment() {
 
         return view
     }
+
+
 }
